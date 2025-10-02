@@ -1,0 +1,25 @@
+name: User Email Check Action
+
+# Triggers the workflow on pushes to the main branch
+# and allows for manual triggering via the GitHub UI.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate_email_step:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+      
+      # REQUIRED STEP: This step includes the required email address in its name.
+      - name: 23f3003307@ds.study.iitm.ac.in
+        run: |
+          echo "Verification step successfully executed."
+          echo "This action will now be the most recent action run."
+          
+      - name: Final confirmation
+        run: echo "Action completed."
